@@ -3,6 +3,16 @@
     <title>
         Sign Up
     </title>
-
+    <script type="text/javascript">
+        var apiUrl = 'localhost:5000/user/111';
+        fetch(apiUrl).then(response => {
+          return response.json();
+        }).then(data => {
+          // Work with JSON data here
+          console.log(data);
+        }).catch(err => {
+          // Do something for an error here
+        });
+    </script>
     <h1>Sign Up</h1>
 </html>
