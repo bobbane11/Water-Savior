@@ -6,16 +6,17 @@
 // console.log(Http.responseText)
 // }
 
-let userSignup = function (password, email, numberOfPeople, username) {
+
+let userSignup = function (password, email, numberOfPeople, username, threshold) {
   return new Promise(function (fulfill, reject) {
   const xhttp = new XMLHttpRequest();
   const json = {
     "password": password,
     "email": email,
     "username": username,
-    "numberOfPeople": parseInt(numberOfPeople),
+    "numberOfPeople": parseInt(numberOfPeople) || 0,
     "gallons": 0,
-    "threshold": 10
+    "threshold": threshold || (3170 * parseInt(numberOfPeople)) // per household per month
   };
   url = "http://localhost:5000/user/" + username;
 //   '?password=' + password + '&numberOfPeople=' + numberOfPeople
@@ -63,7 +64,3 @@ let LoadMain = function() {
    info = JSON.parse(sessionStorage.getItem("UserInfo"))
    document.getElementById("usage").innerHTML = "You have used " + info["gallons"] + " out of " + info['threshold'] + "gallons";
 }
-//
-// document.getElementById("login").onclick = function () {
-//     const UserInfo =
-// };
