@@ -109,3 +109,6 @@ padding-top: 14px !important;
     background-image: url('./water3.jpg');
   /*}*/
 }
+#usage {
+  color: dark-green;
+}
