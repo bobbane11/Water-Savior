@@ -6,24 +6,28 @@
    <link rel="stylesheet" href="style.css">
    <h1>Sign Up</h1>
 
-   <form action="action_page.php">
 
 
-       <div class="container">
+         <div class="background">
          <label for="ename"><b>Email</b></label>
          <input type="text" placeholder="Enter Email" name="ename" required>
-
+       </div>
+       <div class="background">
          <label for="psw"><b>Username</b></label>
          <input type="username" placeholder="Enter Username" name="usr" required>
-
+       </div>
+       <div class="background">
          <label for="psw"><b>Password</b></label>
          <input type="password" placeholder="Enter Password" name="psw" required>
-
+       </div>
+       <div class="background">
          <label for="no"><b>Number of people in Household</b></label>
          <input type="text" placeholder="Enter the Number of People" name="no" required>
-
-         </div>
-         </form>
+       </div>
+       <div class="background">
+         <label for="threshold"> <b>Monthly Household Water Usage Limit (Gallons)</b></label>
+         <input type="text" placeholder="Enter Water Usage Limit" name="threshold">
+       </div>
          <script type="text/javascript" src="script.js"></script>
-         <a href='Login.html'><button onClick = "userSignup(document.getElementsByName('psw')[0].value, getElementsByName('ename')[0].value, getElementsByName('no')[0].value, getElementsByName('usr')[0].value)">Sign Up</button></a>
+         <a href='Login.html' style="MARGIN-LEFT: 570px"><button onClick = "userSignup(document.getElementsByName('psw')[0].value, getElementsByName('ename')[0].value, getElementsByName('no')[0].value, getElementsByName('usr')[0].value)">Sign Up</button></a>
 </html>

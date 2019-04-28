@@ -6,6 +6,9 @@
   .container {
     display: flex;
     flex-wrap: wrap;
+    float:center;
+    /* text-align: center; */
+    margin-top: 14px;
   }
 
   .card {
@@ -38,10 +41,10 @@ button {
   height: 55px;
   cursor: pointer;
   background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
 }
 button:hover {
   /*background-color: red;*/
@@ -54,8 +57,8 @@ button:hover {
 
 #login_details {
   background-color:#f3f3f3;
-  margin-left: 277px;
-
+  margin-left: 480px;
+  /* text-align: center; */
 }
 
 h1 {
@@ -68,26 +71,41 @@ h1 {
   /* align-content: center; */
   /* text-align: center; */
   /* align-items: center; */
-  float: center;
-  float: right;
 }
 
 #signup_button {
   float: right;
-  text-align: right;
-  margin-right: 231px;
-  padding-top: 2px;
+  text-align: center;
+  margin-right: 146px;
+  /* padding-top: 2px; */
+  margin-left: 430px;
+  /* margin-top: 20px; */
 }
 
 #login_button {
     margin-bottom: 2px;
     margin-top: -8px;
     padding-left: 33px;
-    margin-left: 361px;
+    margin-left: -66px;
 
 }
 
+#loginButton {
+text-align: center !important;
+padding-top: 14px !important;
+}
 
 #username_input {
   height: 45px;
+}
+
+.background {
+    background-color:#f3f3f3;
+    text-align: center;
+    padding: 10px;
+}
+.image {
+  /*body {*/
+    background-image: url('./water3.jpg');
+  /*}*/
 }
