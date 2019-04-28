@@ -61,6 +61,11 @@ let userLogin = function(username, password) {
 }
 
 let LoadMain = function() {
-   info = JSON.parse(sessionStorage.getItem("UserInfo"))
-   document.getElementById("usage").innerHTML = "You have used " + info["gallons"] + " out of " + info['threshold'] + "gallons";
+   info = JSON.parse(sessionStorage.getItem("UserInfo"));
+   userLogin(info['username'], info['password']).then((response) => {
+     info = JSON.parse(response);
+     document.getElementById("usage").innerHTML = "You have used " + info['gallons'] + " out of " + info['threshold'] + " gallons";
+   }).catch(()=> {
+     console.log("User not able to Login");
+   });
 }
