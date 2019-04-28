@@ -57,7 +57,7 @@ button:hover {
 
 #login_details {
   background-color:#f3f3f3;
-  margin-left: 239px;
+  margin-left: 480px;
   /* text-align: center; */
 }
 
@@ -76,9 +76,9 @@ h1 {
 #signup_button {
   float: right;
   text-align: center;
-  margin-right: 161px;
+  margin-right: 146px;
   /* padding-top: 2px; */
-  margin-left: 151px;
+  margin-left: 430px;
   /* margin-top: 20px; */
 }
 
@@ -86,7 +86,7 @@ h1 {
     margin-bottom: 2px;
     margin-top: -8px;
     padding-left: 33px;
-    margin-left: 361px;
+    margin-left: -66px;
 
 }
 
