@@ -9,16 +9,20 @@
 
 
        <div class="container">
-         <label for="uname"><b>Email</b></label>
+         <label for="ename"><b>Email</b></label>
          <input type="text" placeholder="Enter Email" name="ename" required>
+
+         <label for="psw"><b>Username</b></label>
+         <input type="username" placeholder="Enter Username" name="usr" required>
 
          <label for="psw"><b>Password</b></label>
          <input type="password" placeholder="Enter Password" name="psw" required>
 
-
+         <label for="no"><b>Number of people in Household</b></label>
+         <input type="text" placeholder="Enter the Number of People" name="no" required>
 
          </div>
          </form>
          <script type="text/javascript" src="script.js"></script>
-         <a><button onClick = "userSignup()">Sign Up</button></a>
+         <a href='Login.html'><button onClick = "userSignup(document.getElementsByName('psw')[0].value, getElementsByName('ename')[0].value, getElementsByName('no')[0].value, getElementsByName('usr')[0].value)">Sign Up</button></a>
 </html>
