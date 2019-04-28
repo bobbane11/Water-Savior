@@ -14,7 +14,7 @@ let userSignup = function (password, email, numberOfPeople, username) {
     "email": email,
     "username": username,
     "numberOfPeople": parseInt(numberOfPeople),
-    "gallonsUsed": 0,
+    "gallons": 0,
     "threshold": 10
   };
   url = "http://localhost:5000/user/" + username;
@@ -47,17 +47,23 @@ let userLogin = function(username, password) {
                   console.log(request, event);
                   console.log(xhttp.responseText);
                   let response = xhttp.responseText;
+                  sessionStorage.setItem("UserInfo", response);
                   fulfill(response);
               };
-      
+
               xhttp.onerror = function (request, event) {
                   console.log(request, event);
                   reject ("request not processed succesfully");
               };
       });
-    
+
 }
 
-document.getElementById("login").onclick = function () {
-    const UserInfo = userLogin(document.getElementsByName('login_usr')[0].value, document.getElementsByName('login_pwd')[0].value);
-};
+let LoadMain = function() {
+   info = JSON.parse(sessionStorage.getItem("UserInfo"))
+   document.getElementById("usage").innerHTML = "You have used " + info["gallons"] + " out of " + info['threshold'] + "gallons";
+}
+//
+// document.getElementById("login").onclick = function () {
+//     const UserInfo =
+// };

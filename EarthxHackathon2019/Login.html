@@ -3,10 +3,10 @@
     <title>Water Savior!</title>
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <div className="header"><h1>Water Savior!</h1> <div>
+    <div class="header"><h1>Water Savior!</h1> <div>
 
 
-      <div className="over_box">
+      <div class="over_box">
             <div class="container">
               <div id="login_details">
                 <div id="username_input">
@@ -20,12 +20,14 @@
             </div>
 
           </div>
-          <div id="login_button>
-              <a href="MainPage.html"><button id="login">Login</button></a>
+          <div id="loginButton">
+          <div id="login_button">
+              <a href="MainPage.html"><button id="login" onclick="userLogin(document.getElementsByName('login_usr')[0].value, document.getElementsByName('login_psw')[0].value)">Login</button></a>
           </div>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
 
           <div class="container">
               <div id="signup_button">
