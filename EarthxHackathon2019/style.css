@@ -2,25 +2,92 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .container {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .card {
     margin: 1rem;
     border: 1px solid gray;
   }
-  
+
   @media screen and (min-width: 600px) {
     .card {
       flex: 1 1 calc(50% - 2rem);
     }
   }
-  
+
   @media screen and (min-width: 900px) {
     .card {
       flex: 1 1 calc(33% - 2rem);
     }
   }
+
+header {
+  background-color: green;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+button {
+  font-size: 12px;
+  background-size: contain;
+  height: 55px;
+  cursor: pointer;
+  background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+}
+button:hover {
+  /*background-color: red;*/
+  /* Add a hover effect for buttons */
+    opacity: 0.8;
+}
+.center {
+  text-align: center;
+}
+
+#login_details {
+  background-color:#f3f3f3;
+  margin-left: 277px;
+
+}
+
+h1 {
+  margin-top: 5%;
+  background-color: aquamarine;
+}
+
+#login_details, #login_button, #cancel_button, #signup_button {
+  padding: 15px;
+  /* align-content: center; */
+  /* text-align: center; */
+  /* align-items: center; */
+  float: center;
+  float: right;
+}
+
+#signup_button {
+  float: right;
+  text-align: right;
+  margin-right: 231px;
+  padding-top: 2px;
+}
+
+#login_button {
+    margin-bottom: 2px;
+    margin-top: -8px;
+    padding-left: 33px;
+    margin-left: 361px;
+
+}
+
+
+#username_input {
+  height: 45px;
+}

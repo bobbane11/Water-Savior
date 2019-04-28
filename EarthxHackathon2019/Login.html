@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
     <title>Water Savior!</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <div className="header"><h1>Water Savior!</h1> <div>
 
-    <h1>Water Savior!</h1>
 
-            
-          
+      <div className="over_box">
             <div class="container">
-              <label for="login_usr"><b>Username</b></label>
+              <div id="login_details">
+                <div id="username_input">
+                <label for="login_usr"><b>Username</b></label>
               <input type="text" placeholder="Enter Username" name="login_usr" required>
-          
+                </div>
+            <div id="password_input">
               <label for="login_psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="login_psw" required>
-          
+            </div>
+            </div>
+
+          </div>
+          <div id="login_button>
               <a href="MainPage.html"><button id="login">Login</button></a>
+          </div>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>            
-            </div>
+              </label>
 
-          
-            <div class="container" style="background-color:#f3f3f3">
+          <div class="container">
+              <div id="signup_button">
+                <a href="SignUp.html"><button>Sign Up</button></a>
+            </div>
+              <div id="cancel_button">
               <button type="button" class="cancelbtn">Cancel</button>
               <span class="psw">Forgot <a href="#">password?</a></span>
-              <script type="text/javascript" src="script.js"></script>
-
-              
             </div>
+            </div>
+          </div>
 
-          <a href="SignUp.html"><button>Sign Up</button></a>
-    
 </html>
