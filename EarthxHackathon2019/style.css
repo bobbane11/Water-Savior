@@ -104,3 +104,8 @@ padding-top: 14px !important;
     text-align: center;
     padding: 10px;
 }
+.image {
+  /*body {*/
+    background-image: url('./water3.jpg');
+  /*}*/
+}
