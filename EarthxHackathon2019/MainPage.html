@@ -12,6 +12,53 @@
            <p>Welcome to your Water Savior page. Here you can access all the information you need about your water usage.</p>
 
            <h2>Your Usage</h2>
+           <style>
+                #myProgress {
+                  width: 100%;
+                  background-color: #ddd;
+                }
+                
+                #myBar {
+                  width: 1%;
+                  height: 30px;
+                  background-color: #4CAF50;
+                }
+                </style>
+                <body>
+                
+                <h3>Consumption</h3>
+                
+                <div id="myProgress">
+                  <div id="myBar"></div>
+                </div>
+                <div class="w3-red" style="width:75%"></div>
+                <br>
+                <button onclick="move()">Click Me</button> 
+                
+                <script>
+                function move() {
+                  var elem = document.getElementById("myBar"); 
+                  let info = JSON.parse(sessionStorage.getItem("UserInfo"));  
+                  var percentage = (info['gallons']/info['threshold']) * 100;
+                  if (percentage >= 75) {
+                      elem.style.backgroundColor='#FF0000';
+                  }
+                  var width = 1;
+                  var id = setInterval(frame, 10);
+                  function frame() {
+                    if (width >= percentage) {
+                      clearInterval(id);
+                    } 
+                    else  {
+                      width++; 
+                      elem.style.width = width + '%'; 
+                    }
+                  }
+                  
+                }
+                </script>
+                
+
            <h3 id=usage></h3>
          </body>
        </div>
